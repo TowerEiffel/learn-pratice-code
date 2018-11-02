@@ -1,13 +1,11 @@
 package com.myplay.weichatdemo.controller;
 
 
-import com.alibaba.fastjson.JSON;
 import lombok.extern.slf4j.Slf4j;
 import me.chanjar.weixin.common.api.WxConsts;
 import me.chanjar.weixin.common.bean.WxJsapiSignature;
 import me.chanjar.weixin.common.bean.result.WxMediaUploadResult;
 import me.chanjar.weixin.common.error.WxErrorException;
-import me.chanjar.weixin.mp.api.WxMpMassMessageService;
 import me.chanjar.weixin.mp.api.WxMpMaterialService;
 import me.chanjar.weixin.mp.api.WxMpService;
 import me.chanjar.weixin.mp.api.WxMpTemplateMsgService;
@@ -21,9 +19,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.io.File;
-import java.sql.Timestamp;
 import java.util.Arrays;
-import java.util.Date;
 import java.util.List;
 
 @RestController
@@ -157,10 +153,10 @@ public class testAuthorize {
 
     }*/
 
-    public static void main(String[] args) {
+  /*  public static void main(String[] args) {
         String adateStr="2018-05-04 16:24:09.0";
         Timestamp timestamp = Timestamp.valueOf(adateStr);
         Date date = new Date(timestamp.getTime());
         System.out.println(date);
-    }
+    }*/
 }
