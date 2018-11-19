@@ -2,6 +2,7 @@ package com.myplay.config;
 
 import com.myplay.annotation.componentscan.MyTypeFilter;
 import com.myplay.domain.bean.Person;
+import org.springframework.beans.factory.annotation.Configurable;
 import org.springframework.context.annotation.*;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Controller;
@@ -16,11 +17,12 @@ import java.lang.reflect.Type;
  * @Date: 2018/11/2 11:50
  */
 @Configuration  //声明这是一个配置类
-//@ComponentScan(value = "com.myplay")
-@ComponentScan(value = "com.myplay",useDefaultFilters = false,includeFilters = {
+//@Configurable  作用在于 声明一个类，这个类中需要ioc容器中的一些bean被自动注入，而这个类可能不会被ioc容器管理 但是开启Spring的LoadTimeWeaving
+@ComponentScan(value = "com.myplay")
+/*@ComponentScan(value = "com.myplay",useDefaultFilters = false,includeFilters = {
         @ComponentScan.Filter(type = FilterType.CUSTOM,classes = {MyTypeFilter.class}),
 
-})
+})*/
 /*@ComponentScans(@ComponentScan(value = "com.myplay",excludeFilters = {
         @ComponentScan.Filter(type = FilterType.ANNOTATION,classes = {Controller.class, Service.class})
 }))
